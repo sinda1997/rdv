@@ -1,0 +1,33 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">
+    <h1>Demande de credit</h1></div>
+  <div class="  shadow p-3 position-relative">
+    <div class=" ">
+      <table  class="table" style="width: 100%" >
+          <thead class="thead-dark">
+            <tr>
+                  <th scope="col">numDemande</th>
+                  <th scope="col">besoin</th>
+                  <th scope="col">montant</th>
+                  <th scope="col">duree</th>
+                  <th scope="col">annuite maximale </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let demande of demandes">
+                  <td>{{demande.numDemande}}</td>
+                  <td>{{demande.besoin}}</td>
+                  <td>{{demande.montant}}</td>
+                  <td>{{demande.duree}}</td>
+                  <td>{{demande.annuiteMaximale}}</td>
+                  <td><button (click)="deleteDemande(demande.NumDemande)" class="btn btn-danger" >Delete</button>
+                    <a class="btn btn-primary" href="update-demande" class =  "btn btn-info" style="margin-left: 10px" role="button">Update</a>
+                    <a class="btn btn-primary" href="demande.details" class =  "btn btn-info" style="margin-left: 10px" role="button">Details</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div>
+</div>
+
